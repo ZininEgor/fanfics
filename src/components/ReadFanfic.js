@@ -27,7 +27,7 @@ export default function DetailMyFanfic() {
 
     const getFanfic = useCallback(async () => {
         try {
-            const fetched = await request(`/api/fanfics/${id}`, 'GET', null)
+            const fetched = await request(`https://fan-fick.herokuapp.com/api/fanfics/${id}`, 'GET', null)
             setTitle(fetched.fanfic.title)
             setText(fetched.fanfic.body)
             setUser(
